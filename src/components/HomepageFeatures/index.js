@@ -14,7 +14,7 @@ const FeatureList = [
     icon: '/img/feat-ai.png',
     title: 'AI 技術',
     subtitle: '精準問答',
-    description: '檢索增強生成（RAG），每個回答都附上經典出處與引用。',
+    description: '檢索增強生成（Agentic RAG），每個回答都附上經典出處與引用。',
   },
   {
     icon: '/img/feat-sutra.png',
