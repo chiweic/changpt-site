@@ -1,0 +1,39 @@
+/* Dark ink band with gold icons, mirroring the brand sheet's feature strip.
+   The icon PNGs carry the band's #1a1a1a background, so the band must match. */
+.featureBand {
+  background: #1a1a1a;
+  padding: 3.5rem 0;
+  color: #faf9f6;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+
+.featureIcon {
+  width: 72px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  color: #b09269;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.12em;
+}
+
+.featureSubtitle {
+  color: rgba(250, 249, 246, 0.85);
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+}
+
+.featureDescription {
+  font-size: 0.9rem;
+  color: rgba(250, 249, 246, 0.6);
+  max-width: 240px;
+}

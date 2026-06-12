@@ -1,0 +1,77 @@
+/**
+ * ChanGPT brand theme — ink, gold, seal red on cream.
+ * Palette extracted from the brand sheet:
+ *   ink #1b1b1a · gold #b09269 · seal #a53024 · cream #faf9f6
+ */
+
+:root {
+  --changpt-ink: #1b1b1a;
+  --changpt-gold: #b09269;
+  --changpt-seal: #a53024;
+  --changpt-cream: #faf9f6;
+
+  /* darkened gold for accessible links/buttons on light backgrounds */
+  --ifm-color-primary: #8a6c41;
+  --ifm-color-primary-dark: #7c613b;
+  --ifm-color-primary-darker: #755c37;
+  --ifm-color-primary-darkest: #614c2e;
+  --ifm-color-primary-light: #987747;
+  --ifm-color-primary-lighter: #9f7d4b;
+  --ifm-color-primary-lightest: #b09269;
+
+  --ifm-background-color: var(--changpt-cream);
+  --ifm-navbar-background-color: var(--changpt-cream);
+  --ifm-font-color-base: #21201e;
+  --ifm-heading-font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU',
+    Georgia, serif;
+  --ifm-footer-background-color: #1a1a1a;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #c9ab7f;
+  --ifm-color-primary-dark: #c09e6c;
+  --ifm-color-primary-darker: #bb9762;
+  --ifm-color-primary-darkest: #a37f4a;
+  --ifm-color-primary-light: #d2b892;
+  --ifm-color-primary-lighter: #d7bf9c;
+  --ifm-color-primary-lightest: #e5d4bc;
+
+  --ifm-background-color: #171614;
+  --ifm-navbar-background-color: #171614;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid rgba(27, 27, 26, 0.08);
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom-color: rgba(250, 249, 246, 0.08);
+}
+
+.navbar__logo img {
+  border-radius: 4px;
+}
+
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #1a1a1a;
+  --ifm-footer-link-color: rgba(250, 249, 246, 0.7);
+  --ifm-footer-title-color: var(--changpt-gold);
+}
+
+.footer--dark .footer__copyright {
+  color: rgba(250, 249, 246, 0.45);
+  font-family: var(--ifm-heading-font-family);
+  letter-spacing: 0.08em;
+}

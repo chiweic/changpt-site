@@ -1,0 +1,92 @@
+/* Brand hero stays cream in both color modes — it is the brand block. */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem 4.5rem;
+  background: #faf9f6;
+  color: #1b1b1a;
+}
+
+.enso {
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+
+.wordmark {
+  height: auto;
+  max-width: 90vw;
+}
+
+.subtitle {
+  margin: 1.5rem 0 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  color: rgba(27, 27, 26, 0.72);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.buttonInk {
+  --ifm-button-color: #1b1b1a;
+  color: #1b1b1a;
+  border-color: rgba(27, 27, 26, 0.4);
+}
+
+.buttonInk:hover {
+  color: #1b1b1a;
+  border-color: #1b1b1a;
+  background: rgba(27, 27, 26, 0.05);
+}
+
+.explore {
+  padding: 3.5rem 0;
+}
+
+.exploreCard {
+  display: block;
+  height: 100%;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(27, 27, 26, 0.12);
+  border-radius: 8px;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exploreCard:hover {
+  text-decoration: none;
+  color: inherit;
+  border-color: #b09269;
+  box-shadow: 0 2px 12px rgba(27, 27, 26, 0.08);
+}
+
+.exploreCard h3 {
+  color: var(--ifm-color-primary);
+}
+
+.exploreCard p {
+  margin-bottom: 0;
+  color: var(--ifm-font-color-base);
+  opacity: 0.8;
+}
+
+[data-theme='dark'] .exploreCard {
+  border-color: rgba(250, 249, 246, 0.15);
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .wordmark {
+    width: 260px;
+  }
+}
