@@ -49,3 +49,21 @@ collections:
       - {label: 側欄順序 Sidebar position, name: sidebar_position, widget: number, required: false, value_type: int, hint: "數字越小越靠前；留空則依字母排序"}
       - {label: 側欄標題 Sidebar label, name: sidebar_label, widget: string, required: false, hint: "選填：側欄顯示文字（預設用標題）"}
       - {label: 內文 Body, name: body, widget: markdown}
+
+  # ── 頁面 (Standalone pages: /research, /demo) ────────────────────────────
+  - name: pages
+    label: 頁面 (Pages)
+    # Fixed single-file entries (not a folder you add to).
+    files:
+      - name: research
+        label: 研究 Research (/research)
+        file: src/pages/research.md
+        fields:
+          - {label: 標題 Title, name: title, widget: string}
+          - {label: 內文 Body, name: body, widget: markdown}
+      - name: demo
+        label: 體驗 Demo (/demo)
+        file: src/pages/demo.md
+        fields:
+          - {label: 標題 Title, name: title, widget: string}
+          - {label: 內文 Body, name: body, widget: markdown}
