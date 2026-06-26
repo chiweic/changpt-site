@@ -14,7 +14,9 @@ const config = {
   url: 'https://changpt.org',
   baseUrl: '/',
 
-  onBrokenLinks: 'throw',
+  // 'warn' (not 'throw') so a broken internal link from a CMS edit doesn't block
+  // the whole deploy — the content still publishes; the bad link just warns.
+  onBrokenLinks: 'warn',
 
   i18n: {
     defaultLocale: 'zh-Hant',

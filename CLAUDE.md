@@ -13,7 +13,7 @@ The README uses `yarn`, but there is no committed `yarn.lock` — only `package-
 ```bash
 npm install          # install deps (Node >= 20)
 npm start            # dev server with live reload (docusaurus start)
-npm run build        # static build into build/  (onBrokenLinks: 'throw' — broken internal links fail the build)
+npm run build        # static build into build/  (onBrokenLinks: 'warn' — broken internal links warn, do not fail the build)
 npm run serve        # serve the built site locally
 npm run clear        # clear the .docusaurus cache (use when the dev server behaves oddly)
 npm run deploy       # build + push to gh-pages (GitHub Pages). Needs GIT_USER=<user> or USE_SSH=true
