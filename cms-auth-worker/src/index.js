@@ -1,8 +1,8 @@
 // Cloudflare Worker: GitHub OAuth provider for Decap CMS.
 //
-// Decap (/admin) opens a popup at  https://auth.changpt.org/auth?provider=github&scope=repo
+// Decap (/admin) opens a popup at  https://cms-auth.changpt.org/auth?provider=github&scope=repo
 //   -> we redirect to GitHub's authorize page
-//   -> GitHub redirects back to https://auth.changpt.org/callback?code=...
+//   -> GitHub redirects back to https://cms-auth.changpt.org/callback?code=...
 //   -> we exchange the code for an access token (server-side, with the secret)
 //   -> we postMessage the token back to the /admin window and it closes the popup.
 //

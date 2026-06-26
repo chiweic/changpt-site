@@ -8,7 +8,7 @@ backend:
   branch: main
   # Origin of the Cloudflare Worker that handles GitHub login (see cms-auth-worker/).
   # The Worker serves /auth (login start) and /callback (token exchange).
-  base_url: https://auth.changpt.org
+  base_url: https://cms-auth.changpt.org
   auth_endpoint: auth
 
 # Where images uploaded in the editor are stored, and how they are referenced in pages.

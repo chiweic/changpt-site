@@ -7,7 +7,7 @@ Login uses a small **Cloudflare Worker** (`cms-auth-worker/`). No server to run.
 ```
 Edit at /admin ─► commit to GitHub ─► Actions builds & deploys ─► GitHub Pages ─► Cloudflare DNS ─► visitors
                        login handshake ▲
-                       Cloudflare Worker (auth.changpt.org)
+                       Cloudflare Worker (cms-auth.changpt.org)
 ```
 
 ## One-time setup
@@ -30,7 +30,7 @@ workflow builds and publishes `build/`.
 ### 3. Create a GitHub OAuth App (for the CMS login)
 GitHub → **Settings → Developer settings → OAuth Apps → New OAuth App**
 - Homepage URL: `https://changpt.org`
-- Authorization callback URL: `https://auth.changpt.org/callback`
+- Authorization callback URL: `https://cms-auth.changpt.org/callback`
 
 Note the **Client ID** and generate a **Client Secret**.
 
@@ -44,7 +44,7 @@ npx wrangler secret put GITHUB_CLIENT_SECRET   # paste Client Secret
 npx wrangler deploy
 ```
 Then in the Cloudflare dashboard: **Workers & Pages → changpt-cms-auth →
-Settings → Domains & Routes → Add → `auth.changpt.org`** (auto-creates DNS).
+Settings → Domains & Routes → Add → `cms-auth.changpt.org`** (auto-creates DNS).
 This must match `base_url` in `static/admin/config.yml`.
 
 ### 5. Edit content
