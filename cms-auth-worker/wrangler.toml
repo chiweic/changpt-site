@@ -2,10 +2,12 @@ name = "changpt-cms-auth"
 main = "src/index.js"
 compatibility_date = "2026-01-01"
 
-# After `wrangler deploy`, attach the custom domain in the Cloudflare dashboard:
-#   Workers & Pages → changpt-cms-auth → Settings → Domains & Routes → Add → cms-auth.changpt.org
-# (This auto-creates the DNS record. The Decap config base_url must match it.)
-#
-# Set the two secrets (not stored in this file):
+# Provisions cms-auth.changpt.org (DNS record + cert) on `wrangler deploy`.
+# The zone changpt.org must be in the same Cloudflare account you log into.
+[[routes]]
+pattern = "cms-auth.changpt.org"
+custom_domain = true
+
+# Set the two secrets (NOT stored in this file):
 #   npx wrangler secret put GITHUB_CLIENT_ID
 #   npx wrangler secret put GITHUB_CLIENT_SECRET
