@@ -7,6 +7,6 @@ title: ChanGPT Demo
 Future interactive demos:
 
 - Buddhist QA
-- semantic search
-- event search
-- AI chat
+- Semantic search
+- Deep Research
+- Agent Framework
