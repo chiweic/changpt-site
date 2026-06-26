@@ -6,7 +6,6 @@ title: ChanGPT Research
 
 This section contains:
 
-- RAG experiments
-- retrieval benchmarks
-- embedding evaluations
+- Experiment (retrievals)
+- Agent (LLM)
 - Buddhist AI research
