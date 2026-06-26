@@ -121,7 +121,7 @@ books; `book_ids: ["04-03"]` → only that book (exhaustive within it);
 `exclude_book_ids: [...]` → everything except those. Discover codes with
 `list_ddc_books`.
 
-Full argument/return schemas: see [`TOOLS.md`](./TOOLS.md).
+Full argument/return schemas are provided to partners on request.
 
 ---
 
