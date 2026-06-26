@@ -1,0 +1,51 @@
+# Decap CMS configuration for the ChanGPT site.
+# Editing happens at /admin. Saved content is committed as Markdown to this repo,
+# which triggers a rebuild & redeploy. No server required.
+
+backend:
+  name: github
+  repo: chiweic/changpt-site
+  branch: main
+  # Origin of the Cloudflare Worker that handles GitHub login (see cms-auth-worker/).
+  # The Worker serves /auth (login start) and /callback (token exchange).
+  base_url: https://auth.changpt.org
+  auth_endpoint: auth
+
+# Where images uploaded in the editor are stored, and how they are referenced in pages.
+media_folder: static/img/uploads
+public_folder: /img/uploads
+
+locale: zh_Hant
+
+collections:
+  # ── 部落格文章 (Blog posts) ──────────────────────────────────────────────
+  - name: blog
+    label: 部落格文章 (Blog)
+    label_singular: 文章
+    folder: blog
+    create: true
+    # Filenames must match Docusaurus' YYYY-MM-DD-<slug>.md convention.
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.slug}}"
+    # authors.yml / tags.yml are ignored automatically (collection reads .md only).
+    fields:
+      - {label: 標題 Title, name: title, widget: string}
+      - {label: 網址代稱 Slug, name: slug, widget: string, hint: "英文網址用，例如 hello-changpt（會用於檔名與網址）"}
+      - {label: 日期 Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
+      - {label: 作者 Authors, name: authors, widget: string, default: "chiwei", hint: "對應 blog/authors.yml 中的代稱"}
+      - {label: 標籤 Tags, name: tags, widget: list, required: false, default: ["changpt"], hint: "對應 blog/tags.yml 中的代稱"}
+      - {label: 內文 Body, name: body, widget: markdown}
+
+  # ── 文件 (Docs) ─────────────────────────────────────────────────────────
+  - name: docs
+    label: 文件 (Docs)
+    label_singular: 文件
+    folder: docs
+    create: true
+    # Doc filenames are ASCII ids; Docusaurus derives the URL from this.
+    slug: "{{fields.slug}}"
+    fields:
+      - {label: 標題 Title, name: title, widget: string}
+      - {label: 檔名 Slug, name: slug, widget: string, hint: "英文檔名，例如 quick-start（會成為網址 /docs/quick-start）"}
+      - {label: 側欄順序 Sidebar position, name: sidebar_position, widget: number, required: false, value_type: int, hint: "數字越小越靠前；留空則依字母排序"}
+      - {label: 側欄標題 Sidebar label, name: sidebar_label, widget: string, required: false, hint: "選填：側欄顯示文字（預設用標題）"}
+      - {label: 內文 Body, name: body, widget: markdown}

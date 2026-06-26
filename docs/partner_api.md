@@ -1,6 +1,7 @@
 ---
 id: partner_api
 title: Partner API Guide
+sidebar_position: 2
 ---
 
 Programmatic access to the Changpt backend API (the same service that powers [https://app.changpt.org](https://app.changpt.org)).

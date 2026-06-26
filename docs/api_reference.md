@@ -1,6 +1,7 @@
 ---
 id: api_reference
 title: API Reference
+sidebar_position: 3
 ---
 
 Partner API reference documentation.
